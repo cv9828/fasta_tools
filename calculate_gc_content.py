@@ -10,19 +10,21 @@ g_count = 0
 t_count = 0
 
 with open(sys.argv[1], 'r') as fasta:
-    for line in fasta:
-        if line.startswith(">"):
-            # Header line, skip it
-            continue
-        for base in line.strip():
-            if base == "A":
-                a_count += 1
-            elif base == "C":
-                c_count += 1
-            elif base == "G":
-                g_count += 1
-            else:
-                t_count += 1
+	a_count = str.count("A",  0, len(sys.argv[1]))
+
+#    for line in fasta:
+#        if line.startswith(">"):
+#            # Header line, skip it
+#            continue
+#        for base in line.strip():
+#            if base == "A":
+#                a_count += 1
+#            elif base == "C":
+#                c_count += 1
+#            elif base == "G":
+#                g_count += 1
+#            elif base == "T":
+#                t_count += 1
 
 print("Base counts for file %s:" % sys.argv[1])
 print("A: %d" % a_count)
