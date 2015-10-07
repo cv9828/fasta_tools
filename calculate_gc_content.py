@@ -4,6 +4,7 @@
 
 import sys
 
+#TESTING CLONING HERE
 
 def gc_content(file_path):
 	""" this method counts the occurance and prints them.
